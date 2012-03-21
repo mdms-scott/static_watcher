@@ -20,33 +20,33 @@ Or install it yourself as:
 
 In a new project run:
 
-  $ static_watcher:install
+    $ static_watcher:install
 
 or
 
-  $ bundle exec static_watcher:install
+    $ bundle exec static_watcher:install
 
 as appropriate.  This will generate the folders which Static Watcher compiles from/into.  The directory structure is:
 
-  /src/haml
-  /src/sass
-  /src/coffeescripts
+    /src/haml
+    /src/sass
+    /src/coffeescripts
 
 which compile, respectively, into:
 
-  /public
-  /public/stylesheets
-  /public/javascripts
+    /public
+    /public/stylesheets
+    /public/javascripts
 
 ## Usage
 
 Simply execute
 
-  $ static_watcher
+    $ static_watcher
 
 or:
 
-  $ bundle exec static_watcher
+    $ bundle exec static_watcher
 
 and user ctrl-c to stop.
 
