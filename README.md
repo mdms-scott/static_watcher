@@ -1,8 +1,10 @@
 # StaticWatcher
 
-TODO: Write a gem description
+Watch and compile Haml, Sass, Scss, and Coffeescript.
 
 ## Installation
+
+Static Watcher requires coffeescript to be installed. See http:coffeescript.org for instructions.
 
 Add this line to your application's Gemfile:
 
@@ -16,9 +18,37 @@ Or install it yourself as:
 
     $ gem install static_watcher
 
+In a new project run:
+
+  $ static_watcher:install
+
+or
+
+  $ bundle exec static_watcher:install
+
+as appropriate.  This will generate the folders which Static Watcher compiles from/into.  The directory structure is:
+
+  /src/haml
+  /src/sass
+  /src/coffeescripts
+
+which compile, respectively, into:
+
+  /public
+  /public/stylesheets
+  /public/javascripts
+
 ## Usage
 
-TODO: Write usage instructions here
+Simply execute
+
+  $ static_watcher
+
+or:
+
+  $ bundle exec static_watcher
+
+and user ctrl-c to stop.
 
 ## Contributing
 
