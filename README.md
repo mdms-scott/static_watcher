@@ -48,7 +48,7 @@ or:
 
     $ bundle exec static_watcher
 
-and user ctrl-c to stop.
+and use ctrl-c to stop.
 
 ## Contributing
 
