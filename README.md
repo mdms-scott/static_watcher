@@ -4,7 +4,7 @@ Watch and compile Haml, Sass, Scss, and Coffeescript.
 
 ## Installation
 
-Static Watcher requires coffeescript to be installed. See http:coffeescript.org for instructions.
+Static Watcher requires coffeescript to be installed. See [http:coffeescript.org](http:coffeescript.org) for instructions.
 
 Add this line to your application's Gemfile:
 
