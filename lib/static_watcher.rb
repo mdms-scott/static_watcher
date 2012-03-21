@@ -93,7 +93,7 @@ module StaticWatcher
   def self.compile_coffeescript(b,r)
     file = "#{b}/#{r}"
     puts "Compiling #{file} ..."
-    content = File.new(file).read
+    content = File.new(file)
     begin
       %x[ coffee -o '../../public/javascripts' -c #{content} ]
       puts "done!"
