@@ -40,6 +40,14 @@ module StaticWatcher
         delete { |b, r| puts "SASS Delete in #{b} to #{r}" }
         create { |b, r| StaticWatcher::compile_sass(b,r) }
       end
+
+      path PATH + '/src/coffeescripts' do
+        glob '**/*.coffee'
+
+        update { |b, r| StaticWatcher::compile_coffeescript(b,r) }
+        delete { |b, r| puts "Coffeescript Delete in #{b} to #{r}" }
+        create { |b, r| StaticWatcher::compile_coffeescript(b,r) }
+      end
     end  
   end 
 
@@ -80,5 +88,17 @@ module StaticWatcher
     FileUtils.mkdir_p File.dirname(output_file)
     File.open(output_file, 'w') { |f| f.write(output) }
     puts "done!"
+  end
+
+  def self.compile_coffeescript(b,r)
+    file = "#{b}/#{r}"
+    puts "Compiling #{file} ..."
+    content = File.new(file).read
+    begin
+      %x[ coffee -o '../../public/javascripts' -c #{content} ]
+      puts "done!"
+    rescue
+      puts "Error in Coffeescript Compilation"
+    end
   end
 end
