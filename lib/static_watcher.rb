@@ -94,7 +94,7 @@ module StaticWatcher
     file = "#{b}/#{r}"
     puts "Compiling #{file} ..."
     begin
-      %x[ coffee -o #{PATH} + '/public/javascripts' -c #{file} ]
+      %x[ coffee -o #{PATH + '/public/javascripts'} -c #{file} ]
       puts "done!"
     rescue
       puts "Error in Coffeescript Compilation"
