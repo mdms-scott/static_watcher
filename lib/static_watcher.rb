@@ -48,9 +48,7 @@ module StaticWatcher
     puts "Compiling #{file} ... "
     content = File.new(file).read
     begin
-      puts 'beginning'
-      engine = ::Haml::Engine.new(content) #(content, (@options[:haml_options] || {}))
-      puts engine
+      engine = ::Haml::Engine.new(content)
       output =  engine.render
     rescue StandardError => error
       puts "Error in HAML compilation of #{r}"
